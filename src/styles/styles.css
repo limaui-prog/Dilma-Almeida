@@ -1,0 +1,21 @@
+@import url('header.css');
+@import url('main.css');
+
+:root {
+    --black: #1e1d1d;
+    --white: white;
+    --cinza: #f9f9f9;
+}
+
+body{
+    background-color: var(--cinza); 
+}
+* {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 500;
+  }
+
