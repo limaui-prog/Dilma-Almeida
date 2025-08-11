@@ -23,6 +23,8 @@ body::before {
     background-position: center;
     background-attachment: fixed;
     z-index: -1;
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 header {
