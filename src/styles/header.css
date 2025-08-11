@@ -37,7 +37,7 @@ header {
 @media (max-width: 638px) {
     
     header {
-        height: 180px;
+        height: 340px;
     }
     #perfil {
         bottom: -40px; 
