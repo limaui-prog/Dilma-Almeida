@@ -1,22 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Elementos do DOM
     const cardsContainer = document.getElementById('cards');
     const prevButton = document.querySelector('.fa-angle-left');
     const nextButton = document.querySelector('.fa-angle-right');
     const cards = document.querySelectorAll('.Card');
+    const sobreMimCard = document.getElementById('sobre-mim-card');
+    const backButton = document.getElementById('back-button');
+    const content = document.getElementById('content');
+    const sobreMimPage = document.getElementById('sobre-mim-page');
+    const body = document.body;
     
+    // Variáveis de estado
     let isDragging = false;
     let startX, scrollLeft;
     let currentIndex = 0;
     const cardsToShow = 2;
     let clickAllowed = true;
 
+    // Links para cada card
     const cardLinks = [
-        'sobre.html',
+        null, // Sobre Mim será tratado separadamente
         'https://wa.me/557182148996',
         'https://www.trgclub.com/terapeuta/maria-almeida-2025-07-01-11-30-38-0300?name=Maria%20Dilma&gender=female',
-        'https://wa.me/5571983618316/'
+        'https://wa.me/5571983618316',
     ];
 
+    // Funções de navegação do carrossel
     function navigate(direction) {
         if (isDragging) return;
         
@@ -88,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Eventos de clique nos cards
     cards.forEach((card, index) => {
-        card.style.cursor = 'pointer'; // Cursor de clique para o card
+        card.style.cursor = 'pointer';
         
         card.addEventListener('mouseenter', () => {
             if (!isDragging) {
@@ -97,13 +106,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         card.addEventListener('click', (e) => {
-            if (!isDragging && clickAllowed && cardLinks[index]) {
-                window.location.href = cardLinks[index];
+            if (!isDragging && clickAllowed) {
+                // Tratamento especial para o card Sobre Mim
+                if (card === sobreMimCard) {
+                    e.preventDefault();
+                    content.style.display = 'none';
+                    sobreMimPage.style.display = 'block';
+                    body.classList.add('show-sobre');
+                    window.scrollTo(0, 0);
+                } 
+                // Redirecionamento normal para os outros cards
+                else if (cardLinks[index]) {
+                    window.location.href = cardLinks[index];
+                }
             }
         });
     });
 
-    // Eventos dos botões
+    // Botão de voltar da página Sobre Mim
+    backButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        content.style.display = 'block';
+        sobreMimPage.style.display = 'none';
+        body.classList.remove('show-sobre');
+    });
+
+    // Eventos dos botões de navegação do carrossel
     nextButton.addEventListener('click', (e) => {
         e.stopPropagation();
         navigate('next');
@@ -129,35 +157,39 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Animações ScrollReveal
-    ScrollReveal().reveal('header', {
-        origin: 'top',
-        duration: 1000,
-        distance: '20%'
-    });
-    
-    ScrollReveal().reveal('#social-media-buttons a', { 
-        origin: 'bottom',
-        duration: 600,
-        distance: '20px',
-        scale: 0.95,
-        interval: 200, 
-    });
-    
-    ScrollReveal().reveal('#bioButton', {
-        origin: 'top',
-        duration: 1000,
-        distance: '100%'
-    });
+    if (typeof ScrollReveal !== 'undefined') {
+        ScrollReveal().reveal('header', {
+            origin: 'top',
+            duration: 1000,
+            distance: '20%'
+        });
+        
+        ScrollReveal().reveal('#social-media-buttons a', { 
+            origin: 'bottom',
+            duration: 600,
+            distance: '20px',
+            scale: 0.95,
+            interval: 200, 
+        });
+        
+        ScrollReveal().reveal('#bioButton', {
+            origin: 'top',
+            duration: 1000,
+            distance: '100%'
+        });
+    }
     
     // Animação da seta
     const arrow = document.querySelector('.Pay-arrow');
     
-    function startAnimation() {
-        arrow.style.animation = 'none'; 
-        void arrow.offsetWidth; 
-        arrow.style.animation = 'arrowRunRight 1.5s ease-in-out'; 
-        setTimeout(startAnimation, 2500); 
+    if (arrow) {
+        function startAnimation() {
+            arrow.style.animation = 'none'; 
+            void arrow.offsetWidth; 
+            arrow.style.animation = 'arrowRunRight 1.5s ease-in-out'; 
+            setTimeout(startAnimation, 2500); 
+        }
+        
+        startAnimation();
     }
-    
-    startAnimation();
 });
