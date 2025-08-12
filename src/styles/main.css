@@ -12,6 +12,7 @@
 }
 
 #redes {
+    padding-top: 15px;
     text-align: center;
     display: flex;
     flex-direction: column; 
@@ -200,9 +201,6 @@ i {
     }
     #cards {
         overflow-x: auto; 
-    }
-    #content {
-    padding-top: 20px;
     }
 }
 
