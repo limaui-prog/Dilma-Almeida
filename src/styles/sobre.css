@@ -32,17 +32,11 @@
 }
 
 #sobre-mim-page p {
-    line-height: 1.8;
+    line-height: 2;
     margin-bottom: 20px;
     color: #555;
     font-size: 1rem;
     text-align: justify;
-}
-
-#sobre-mim-page p:first-of-type {
-    font-size: 1.1rem;
-    color: #333;
-    font-weight: 500;
 }
 
 #sobre-mim-page ul {
