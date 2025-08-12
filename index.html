@@ -9,12 +9,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>Cartão Visita - Dilma Almeida</title>
+    <style>
+        /* Estilos para a página Sobre Mim */
+        
+    </style>
 </head>
 <body>
+    <!-- Página principal -->
     <header>
-            <div id="perfil">
-                <img src="src/imagens/me.avif" id="me" alt="">
-            </div>
+        <div id="perfil">
+            <img src="src/imagens/me.avif" id="me" alt="">
+        </div>
     </header>
     <main id="content">
         <section id="redes">
@@ -26,40 +31,60 @@
         </section>
         
         <section id="mais">
-
             <div id="setas">
                 <button class="fa-solid fa-angle-left"></button>
                 <button class="fa-solid fa-angle-right"></button>
             </div>
 
             <div id="cards">
-                <div class="Card" data-link="sobre.html">
+                <div class="Card" id="sobre-mim-card">
                     <i class="fa-solid fa-arrow-up Card-arrow"></i>
                     <h2 class="Titulo">Sobre mim</h2>
                     <img src="src/imagens/sobre.avif" class="Card-image" alt="Imagem sobre mim">
                 </div>
-                <div class="Card" >
+                <div class="Card">
                     <i class="fa-solid fa-arrow-up Card-arrow"></i>
                     <h2 class="Titulo">Agende uma Sessão</h2>
-                    <img src="src/imagens/agende.avif" class="Card-image" alt="agende">
+                    <img src="src/imagens/agende.avif" class="Card-image" alt="Whatsapp">
                 </div>
-                <div class="Card" >
+                <div class="Card">
                     <i class="fa-solid fa-arrow-up Card-arrow"></i>
-                    <h2 class="Titulo">Conheça meu perfil</h2>
-                    <img src="src/imagens/insta.avif" class="Card-image" alt="trg">
+                    <h2 class="Titulo">Conheça o meu perfil</h2>
+                    <img src="src/imagens/insta.avif" class="Card-image" alt="Agendar sessão">
                 </div>
                 <div class="Card">
                     <i class="fa-solid fa-arrow-up Card-arrow"></i>
                     <h2 class="Titulo">Contate no Whatsapp</h2>
-                    <img src="src/imagens/zap.avif" class="Card-image" alt="Whatsapp">
+                    <img src="src/imagens/zap.avif" class="Card-image" alt="Instagram">
                 </div>
             </div>
         </section>
 
         <button class="round-button" id="bioButton"><img src="src/imagens/Vector.svg" id="vetor" alt="">ADQUIRA SEU CARTÃO VISITA<i class="fa-solid fa-arrow-right Pay-arrow"></i></button>
-
     </main>
+
+    <div id="sobre-mim-page">
+        <button class="back-button" id="back-button"><i class="fas fa-arrow-left"></i></button>
+        <h1>Sobre Mim</h1>
+        <p>Olá, eu sou Dilma Almeida, terapeuta emocional, natural do Tocantins e morando atualmente em Camaçari-BA. Sou certificada em TRG – Terapia de Reprocessamento Generativo, especialista em leitura corporal e bacharel em Serviço Social. Tenho dedicado minha trajetória a ajudar pessoas a superarem suas dores emocionais e encontrarem liberdade interior.</p>
+        
+        <p>Minha abordagem terapêutica utiliza um protocolo validado pela TRG, que permite acessar, reprocessar e ressignificar experiências emocionais negativas de forma profunda e eficaz. Essa técnica inovadora e transformadora não apenas alivia sintomas, mas atua diretamente na raiz do sofrimento emocional, promovendo mais leveza, segurança e equilíbrio na vida dos meus clientes.</p>
+        
+        <p>Ao longo dos anos, venho me especializando no atendimento de casos como ansiedade, depressão, fobias, síndrome do pânico e traumas emocionais. Acredito que cada pessoa carrega sua própria história e, por isso, desenvolvo planos personalizados de tratamento, respeitando o ritmo e as necessidades de cada cliente.</p>
+        
+        <p>Meu objetivo é ajudar você a:</p>
+        <ul>
+            <li>Compreender e gerenciar suas emoções</li>
+            <li>Superar ansiedade, estresse e depressão</li>
+            <li>Melhorar seus relacionamentos</li>
+            <li>Desenvolver autoconfiança e autoestima</li>
+            <li>Reconectar-se com sua liberdade interior</li>
+        </ul>
+        
+        <p>Estou comprometida em oferecer um atendimento ético, humanizado e eficaz, onde você se sentirá ouvido, compreendido e apoiado em sua jornada de autoconhecimento e cura emocional.</p>
+        <p>Essa terapia funciona. Ela liberta. Ela cura.</p>
+    </div>
+
     <script src="src/javascript/script.js"></script>
-    
 </body>
-</html
+</html>
