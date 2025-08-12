@@ -10,15 +10,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const cardsToShow = 2;
     let clickAllowed = true;
 
-    // Links para cada card
     const cardLinks = [
         'sobre.html',
+        'https://wa.me/557182148996',
         'https://www.trgclub.com/terapeuta/maria-almeida-2025-07-01-11-30-38-0300?name=Maria%20Dilma&gender=female',
-        'https://wa.me/5571983618316',
-        'https://www.instagram.com/dilma.almeida_terapeuta/'
+        'https://wa.me/5571983618316/'
     ];
 
-    // Funções de navegação
     function navigate(direction) {
         if (isDragging) return;
         
