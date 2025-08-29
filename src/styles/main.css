@@ -29,8 +29,14 @@
 }
 
 span{
-    font-weight: 100;
+    font-weight: 450;
     font-size: 1rem;
+}
+
+#hora {
+    margin-top: 10px;
+    font-weight: 100;
+    font-size: 0.85rem;
 }
 
 #social-media-buttons {
