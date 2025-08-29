@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Links para cada card
     const cardLinks = [
         null, // Sobre Mim será tratado separadamente
-        'https://wa.me/557182148996',
+        'https://wa.me/5571981817557',
         'https://www.trgclub.com/terapeuta/maria-almeida-2025-07-01-11-30-38-0300?name=Maria%20Dilma&gender=female',
         'https://wa.me/5571983618316',
     ];
